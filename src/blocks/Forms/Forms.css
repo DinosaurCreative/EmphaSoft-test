@@ -41,7 +41,6 @@
   min-height: 25px;
   margin: 5px 0 25px;
   opacity: 0;
-  transition: .2s ease-in;
   padding-left: 3px;
   font-size: 11px;
   transition: all .2s linear;
@@ -74,6 +73,7 @@
   margin-top: 100px;
   background-color: #5e5fd5;;
   color: grey;
+  transition: all .15s ease-in;
 }
 
 .form__submit-btn:hover {
@@ -83,4 +83,51 @@
 
 .form__submit-btn:active {
   background-color: #ff8a00;
+}
+
+
+@media screen and (max-width: 500px) {
+  .form__input {
+    border-bottom: 1px #898989 solid;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  
+  .form__input:focus {
+    border-bottom: 1px #24a709 solid;
+  }
+  
+  .form__input_error:focus {
+    border-bottom: 1px #ff7233 solid;
+  }
+  
+  .form__input::placeholder {
+    padding-left: 2px;
+    font-size: 12px;
+  }
+  
+  .form__input:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  
+  .form__error-span {
+    min-height: 25px;
+    margin: 5px 0 20px;
+    font-size: 11px;
+    max-width: 265px;
+  }
+  
+  .form__submit-btn {
+    height: 40px;
+    font-size:15px;
+    margin-top: 70px;
+  }
+  
+  .form__submit-btn_disabled {
+    height: 40px;
+    font-size: 15px;
+    margin-top: 70px;
+
+  }
+  
 }

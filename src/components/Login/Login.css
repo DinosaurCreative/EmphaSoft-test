@@ -1,12 +1,26 @@
 .login {
   margin: auto;
-  min-width: 400px
+  min-width: 320px
 }
 
 .login__title {
   text-align: center;
-  margin: 0 auto 50px ;
+  margin: 0 auto 60px 0;
   color: #fff;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 400;
+  transition: all .2s linear;
+}
+
+@media screen and (max-width: 500px) {
+  .login {
+    min-width: 270px
+  }
+  
+  .login__title {
+    margin: 0 auto 60px 0;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+  }
 }

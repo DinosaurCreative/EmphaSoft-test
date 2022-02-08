@@ -63,7 +63,6 @@ function Login () {
                  }}>
             {(props) => <span {...props} className={`form__error-span ${passwordError && 'form__error-span_visible'}`}>{errorMessageHandler(props)}</span>}
           </Field>
-
           <SubmitButton type='submit'>
             {(props) => <button {...props} className={!props.disabled ? 'form__submit-btn' : 'form__submit-btn_disabled'}>Signin</button>}
           </SubmitButton>
