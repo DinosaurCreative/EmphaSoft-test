@@ -3,7 +3,6 @@
   flex-direction: column;
 }
 
-
 .form__input {
   background-color: transparent;
   border: transparent;
@@ -34,7 +33,6 @@
 .form__input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-
 
 .form__error-span {
   color: #ff4343;
@@ -85,7 +83,6 @@
   background-color: #ff8a00;
 }
 
-
 @media screen and (max-width: 500px) {
   .form__input {
     border-bottom: 1px #898989 solid;
@@ -129,5 +126,4 @@
     margin-top: 70px;
 
   }
-  
 }

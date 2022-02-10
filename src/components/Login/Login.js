@@ -2,22 +2,21 @@ import { useState } from 'react';
 import { Form, Field, SubmitButton, errorStatusHandler, errorMessageHandler } from '../../utils/Forms';
 import { validators } from '../../utils/validators';
 import { errors } from '../../utils/constants';
-function Login () {
+
+function Login ({ onSubmit }) {
   const [ userError, setUserError ] = useState(false);
   const [ passwordError, setPasswordError ] = useState(false);  
-  const [ userData, setUserData ] = useState({ password: '', name: '' });
-
+  
   function errorHandler(e) {
-    if(e.target.name=== 'name' && e.type === 'focus') return setUserError(true)
-    if(e.target.name=== 'name' && e.type === 'blur') return setUserError(false)
+    if(e.target.name=== 'username' && e.type === 'focus') return setUserError(true)
+    if(e.target.name=== 'username' && e.type === 'blur') return setUserError(false)
     if(e.type === 'focus') return setPasswordError(true);
     setPasswordError(false);
   }
 
   function submitHandler(data) {
-    setUserData(data);
+    onSubmit(data)
   }
-  
 
   return (
     <div className="login">
@@ -30,13 +29,13 @@ function Login () {
 
           <Field type='text'
                  placeholder='Username'
-                 name='name'
+                 name='username'
                  onFocus={errorHandler}
                  onBlur={errorHandler}>
             {(props) => <input {...props} className={`form__input ${errorStatusHandler(props) && 'form__input_error'}`}/>}
           </Field>
           
-          <Field name='name'
+          <Field name='username'
                  errors={errors}
                  errorslist={{
                    required: errors.required,

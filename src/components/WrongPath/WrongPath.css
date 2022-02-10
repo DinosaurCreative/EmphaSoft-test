@@ -1,0 +1,42 @@
+.wrong-path {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.wrong-path__img {
+  background-image: url(../../images/хз.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  opacity: .1;
+  width: 55%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.wrong-path__message {
+  text-align: center;
+  font-size: 250px;
+  z-index: 1;
+  margin: 0 0 40px;
+  color: beige;
+}
+
+.wrong-path__button {
+  outline: none;
+  background-color: #0083a1;
+  border: 3px solid rgba(255, 255, 255, 0.363);
+  border-radius: 10px;
+  cursor: pointer; 
+  z-index: 1;
+  color: white;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.wrong-path__button-container {
+  display: flex;
+  flex-direction: column;
+}

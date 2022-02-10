@@ -2,3 +2,7 @@
 @import url(./components/App/App.css);
 @import url(./blocks/Forms/Forms.css);
 @import url(./components/Login/Login.css);
+@import url(./components/UserLine/UserLine.css);
+@import url(./components/UserList/UserList.css);
+@import url(./components/NotificationPopup/NotificationPopup.css);
+@import url(./components/WrongPath/WrongPath.css);

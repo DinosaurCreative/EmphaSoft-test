@@ -1,0 +1,31 @@
+.userline {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 15px;
+}
+
+.userline:first-of-type {
+  margin-top: 25px;
+}
+
+.userline:nth-of-type(1n) {
+  background-color: #d3d3d31c;;
+  border-radius: 25px 10px 10px 25px;
+}
+
+.userline__parametr {
+  margin: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #ede9e9; 
+  font-weight: 300;
+}
+
+.userline__parametr:nth-child(1) {
+  background-color: #0079cffa;
+  width: 48px;
+  border-radius: 25px;
+  justify-content: center;
+}

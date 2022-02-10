@@ -1,7 +1,7 @@
 import { nameRegexp, passwordRegexp } from './constants';
 
 export const validators = {
-  name: {
+  username: {
     required(val) {
       return val === '';
     },
