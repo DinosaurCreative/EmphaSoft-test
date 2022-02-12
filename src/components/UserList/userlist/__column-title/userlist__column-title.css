@@ -1,0 +1,37 @@
+.userlist__column-title {
+  color: #fff;
+  font-weight: 200;
+}
+
+.userlist__column-title:nth-child(1) {
+  padding-left: 15px;
+  color:#e7cc00e8
+}
+
+@media screen and (max-width: 860px) {
+  .userlist__column-title {
+    font-size: 18px;
+  }
+  .userlist__column-title:nth-child(1) {
+    padding-left: 14px;
+  }
+  
+}  
+
+@media screen and (max-width: 600px) {
+  .userlist__column-title {
+    font-size: 15px;
+  }
+  .userlist__column-title:nth-child(1) {
+    padding-left: 9px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .userlist__column-title {
+    font-size: 12px;
+  }
+  .userlist__column-title:nth-child(1) {
+    padding-left: 10px;
+  }
+}

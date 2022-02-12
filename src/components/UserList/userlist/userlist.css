@@ -1,0 +1,27 @@
+.userlist {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: inherit;
+  color: aliceblue;
+  margin: 100px 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 860px) {
+  .userlist {
+    margin: 70px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .userlist {
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .userlist {
+    margin: 50px 0;
+  }
+}

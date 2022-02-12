@@ -1,0 +1,24 @@
+.uselist__id-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  column-gap: 25px;
+}
+
+@media screen and (max-width: 860px) {
+  .uselist__id-container {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .uselist__id-container {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .uselist__id-container {
+    column-gap: 5px;
+  }
+}

@@ -1,0 +1,27 @@
+.form__error-span {
+  color: #ff4343;
+  min-height: 25px;
+  margin: 5px 0 25px;
+  opacity: 0;
+  padding-left: 3px;
+  font-size: 11px;
+  transition: all .2s linear;
+}
+
+@media screen and (max-width: 860px) {
+  .form__error-span {
+    min-height: 25px;
+    margin: 5px 0 25px;
+    padding-left: 3px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form__error-span {
+    min-height: 25px;
+    margin: 5px 0 20px;
+    font-size: 11px;
+    max-width: 265px;
+  }
+}

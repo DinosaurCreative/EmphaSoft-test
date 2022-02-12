@@ -12,14 +12,14 @@
 
 .app__button-container {
   display: flex;
-  align-self: flex-end;
-  margin: 35px 0 0 auto;
+  width: 100%;
+  justify-content: end;
+  margin: 35px 0 0;
   column-gap: 40px;
 }
   
 .app__button {
   display: flex;
-  column-gap: 20px;
   padding: 0;
   width: 180px;
   height: 30px;
@@ -32,6 +32,11 @@
   color: goldenrod;
   transition: all .1s linear;
   cursor: pointer;
+  text-decoration: none;
+}
+.app__button_update-userlist {
+  /* align-self: flex-start; */
+  margin-right: auto;
 }
 
 .app__button:hover {
@@ -52,4 +57,44 @@
 
 .app__button_exit:active {
   background-color: #3d010b;
+}
+
+@media screen and (max-width: 1279px) {
+  .app {
+    padding: 0 100px;
+  }
+
+  .app__button {
+    width: 140px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .app {
+    padding: 0 50px;
+  }
+
+  .app__button-container {
+    margin-top: 20px;
+    column-gap: 20px;
+  }
+
+
+  .app__button {
+    width: 110px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 0 10px;
+  }
+
+  .app__button {
+    width: 90px;
+    height: 30px;
+  }
 }

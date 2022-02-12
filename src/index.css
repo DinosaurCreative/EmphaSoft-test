@@ -6,3 +6,5 @@
 @import url(./components/UserList/UserList.css);
 @import url(./components/NotificationPopup/NotificationPopup.css);
 @import url(./components/WrongPath/WrongPath.css);
+@import url(./components/CreateUser/CreateUser.css);
+@import url(./components/UpdateUser/UpdateUser.css);

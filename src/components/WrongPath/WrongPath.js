@@ -1,7 +1,12 @@
 function WrongPath({ history }) {
 
   function goBack() {
-    history.goBack()
+    if(history.goBack() === undefined) {
+      history.push('/users');
+      return
+    }
+    history.goBack();
+
   }
   return (
       <div className="wrong-path">

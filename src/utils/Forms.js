@@ -94,7 +94,6 @@ export const SubmitButton = ({ children, ...props }) => {
 }
 
 export const errorMessageHandler = (props) => {
-
   for (const name in props.errors) {
     if(props.errors[name]) {
       return props.errorslist[name];

@@ -1,0 +1,53 @@
+.userlist__id-sort-btn_place_down {
+  position: absolute;
+  left: 1px;
+  bottom: 14px;
+  border-top: none;
+  border-bottom: 40px solid #0879ce;
+  width: 0;
+	height: 0;
+	border-left: 23px solid transparent;
+	border-right: 23px solid transparent;
+  background-color: transparent;
+  outline: transparent;
+  padding: 0;
+  cursor: pointer;
+  align-self: center;
+  transition: all .2s linear;
+  z-index: 0;
+}
+
+.userlist__id-sort-btn_place_down:hover {
+  border-bottom: 40px solid #0879ce;
+  border-top: none;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .userlist__id-sort-btn_place_down {
+    top: 5px;
+    left: 0;
+    border-bottom: 28px solid #0879ce;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+  }
+  
+  .userlist__id-sort-btn_place_down:hover {
+    border-bottom: 28px solid #0879ce;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .userlist__id-sort-btn_place_down {
+    top: 3px;
+    left: 1px;
+    border-bottom: 25px solid #0879ce;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+  .userlist__id-sort-btn_place_down:hover {
+    border-bottom: 25px solid #0879ce;
+  }
+}

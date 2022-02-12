@@ -4,12 +4,12 @@ import { validators } from '../../utils/validators';
 import { errors } from '../../utils/constants';
 
 function Login ({ onSubmit }) {
-  const [ userError, setUserError ] = useState(false);
+  const [ usernameError, setUsernameError ] = useState(false);
   const [ passwordError, setPasswordError ] = useState(false);  
   
   function errorHandler(e) {
-    if(e.target.name=== 'username' && e.type === 'focus') return setUserError(true)
-    if(e.target.name=== 'username' && e.type === 'blur') return setUserError(false)
+    if(e.target.name === 'username' && e.type === 'focus') return setUsernameError(true)
+    if(e.target.name === 'username' && e.type === 'blur') return setUsernameError(false)
     if(e.type === 'focus') return setPasswordError(true);
     setPasswordError(false);
   }
@@ -42,23 +42,22 @@ function Login ({ onSubmit }) {
                    maxLength: errors.maxLength,
                    nameFormatErr: errors.nameFormatErr,
                  }}>
-            {(props) => <span {...props} className={`form__error-span ${userError && 'form__error-span_visible'}`}>{errorMessageHandler(props)}</span>}
+            {(props) => <span {...props} className={`form__error-span ${usernameError && 'form__error-span_visible'}`}>{errorMessageHandler(props)}</span>}
           </Field> 
           
           <Field type='password'
                  placeholder='Password'
-                 name='password'
+                 name='password_login'
                  onFocus={errorHandler}
                  onBlur={errorHandler}>
             {(props) => <input {...props} className={`form__input ${errorStatusHandler(props) && 'form__input_error'}`}/>}
           </Field>
           
-          <Field name='password'
+          <Field name='password_login'
                  errors={errors}
                  errorslist={{
                    required: errors.required,
                    maxLength: errors.maxLength,
-                   passFormatError: errors.passFormatError,
                  }}>
             {(props) => <span {...props} className={`form__error-span ${passwordError && 'form__error-span_visible'}`}>{errorMessageHandler(props)}</span>}
           </Field>

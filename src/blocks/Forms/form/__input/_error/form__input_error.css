@@ -1,0 +1,9 @@
+.form__input_error:focus {
+  border-bottom: 2px #ff7233 solid;
+}
+
+@media screen and (max-width: 500px) {
+  .form__input_error:focus {
+    border-bottom: 1px #ff7233 solid;
+  }
+}

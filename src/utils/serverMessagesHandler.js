@@ -1,8 +1,8 @@
 import { popupMessages, serverCodes } from './constants';
 
 function serverMessagesHandler(status, errorSetter) {
-  const { BAD_REQUEST, INTERNAL_SERVER_ERROR } = serverCodes;
-  const { serverError, wrongUserData, unknownError } = popupMessages;
+  const { BAD_REQUEST, INTERNAL_SERVER_ERROR, NOT_FOUND } = serverCodes;
+  const { serverError, wrongUserData, unknownError, notFound } = popupMessages;
 
   switch(status) {
     case INTERNAL_SERVER_ERROR:
@@ -10,6 +10,9 @@ function serverMessagesHandler(status, errorSetter) {
       break;
     case BAD_REQUEST:
       errorSetter(wrongUserData);
+      break;
+    case NOT_FOUND:
+      errorSetter(notFound);
       break;
     default:
       errorSetter(unknownError);
