@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useState } from "rea
 const FormContext = createContext({});
 
 export const Form = ({ children, className, onSubmit, validators }) => {
-  const [ formValues, setFormValues ] = useState({})
+  const [ formValues, setFormValues ] = useState({});
   const [ isFormInvalid, setIsFormInvailid ] = useState(true);
   const [ formErrors, setFormErrors ] = useState({});
 
@@ -10,13 +10,13 @@ export const Form = ({ children, className, onSubmit, validators }) => {
     setFormValues(prevVal => ({
       ...prevVal,
       [name]: value,
-    }))
+    }));
   }, []);
 
   function onSubmithandler(e) {
     e.preventDefault();
     onSubmit(formValues);
-  }
+  };
 
   const formContextValue = { 
     onChangeInput,
@@ -28,9 +28,8 @@ export const Form = ({ children, className, onSubmit, validators }) => {
   useEffect(() => {
     const formKeys = Object.keys(formValues);
     const allErrors = formKeys.map((key) => {
-      if(!validators[key]) {
-        return
-      }
+      if(!validators[key]) return;
+
       const valueByKey = formValues[key];
       const errors = Object.entries(validators[key]).map(([errorKey, validatorFn]) => {
         return { [errorKey]: validatorFn(valueByKey) }
@@ -47,11 +46,11 @@ export const Form = ({ children, className, onSubmit, validators }) => {
       for (let errorKey in   keyErrors) {
         if (keyErrors[errorKey] === true) {
          return setIsFormInvailid(true);
-        }
-      }
-    }
+        };
+      };
+    };
     setIsFormInvailid(false);
-  }, [formErrors, setIsFormInvailid])
+  }, [formErrors, setIsFormInvailid]);
 
   return (
     <form className={className}
@@ -60,20 +59,21 @@ export const Form = ({ children, className, onSubmit, validators }) => {
         {children}
       </FormContext.Provider>
     </form>
-  )  
-}
+  );
+};
 
 export const Field = ({children, ...props }) => {
   const [ value, setValue ] = useState('');
   const { onChangeInput, formErrors, formValues } = useContext(FormContext);
 
   function onChangeHandler(e) {
-    setValue(e.target.value)
-  }
+    setValue(e.target.value);
+  };
+
   useEffect(() => {
     if(props.name === undefined) return
     onChangeInput(props.name, value);
-  }, [props.name, value, onChangeInput])
+  }, [props.name, value, onChangeInput]);
 
   return (
     children({ 
@@ -82,16 +82,16 @@ export const Field = ({children, ...props }) => {
       errors: formErrors[props.name],
       values: formValues[props.name],
     })
-  )
-}
+  );
+};
 
 export const SubmitButton = ({ children, ...props }) => {
   const { isFormInvalid } = useContext(FormContext);
 
   return (
     children({...props, disabled: isFormInvalid })
-  )
-}
+  );
+};
 
 export const errorMessageHandler = (props) => {
   for (const name in props.errors) {

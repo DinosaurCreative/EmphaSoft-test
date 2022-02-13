@@ -1,5 +1,5 @@
 export const nameRegexp = /^[\w.@+-]+$/;
-export const passwordRegexp = /^(?=.*[A-Z])(?=.*\d).{0,}$/
+export const passwordRegexp = /^(?=.*[A-Z])(?=.*\d).{0,}$/;
 export const baseURL = 'http://emphasoft-test-assignment.herokuapp.com';
 export const errors = {
   required: 'Required field',
@@ -7,20 +7,19 @@ export const errors = {
   nameFormatErr: 'Invalid characters entered',
   passFormatError: 'Password must contain at least one number and one capital letter',
   passMinLength: 'Password must be at least 8 letters length',
-}
+};
 export const popupMessages = {
-  serverError: 'There was a server failure. Try again in a minute', // 500
-  wrongUserData: 'Incorrect password or username', // 401
+  serverError: 'There was a server failure. Try again in a minute',
+  wrongUserData: 'Incorrect password or username',
   userDataChangeFailure: 'Failed to change user data',
-  unauthorized: 'You are not logged in', // 401
+  unauthorized: 'You are not logged in',
   unknownError: 'Unknown issue. Check internet connection and try again',
   notFound: 'User not found',
-  userDataChanged: 'User data has been changed', // 200
-  signinOk: 'You are logged in', // 200
-  userCreated: 'New user created', // 201
-  userDeleted: 'User deleted', // 204
-}
-
+  userDataChanged: 'User data has been changed',
+  signinOk: 'You are logged in',
+  userCreated: 'New user created',
+  userDeleted: 'User deleted',
+};
 export const serverCodes = {
   OK: 200,
   CREATED: 201,
@@ -29,4 +28,4 @@ export const serverCodes = {
   INTERNAL_SERVER_ERROR: 500,
   NO_CONTENT: 204,
   NOT_FOUND: 404,
-}
+};

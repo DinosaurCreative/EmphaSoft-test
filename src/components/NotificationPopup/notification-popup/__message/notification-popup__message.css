@@ -1,0 +1,32 @@
+.notification-popup__message {
+  padding: 0 12px;
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 860px) {
+  .notification-popup__message {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .notification-popup__message {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notification-popup__message {
+    font-size: 10px;
+    line-height: 11px;
+    margin-top: 2px;
+  }  
+}

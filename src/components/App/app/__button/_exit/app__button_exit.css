@@ -1,0 +1,11 @@
+.app__button_exit {
+  background-color: #680113;
+}
+
+.app__button_exit:hover {
+  background-color: #57000e;
+}
+
+.app__button_exit:active {
+  background-color: #3d010b;
+}

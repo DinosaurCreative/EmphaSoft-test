@@ -1,0 +1,39 @@
+.userline__parametr {
+  margin: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #ede9e9; 
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.userline__parametr:nth-child(1) {
+  background-color: #0079cf;
+  width: 48px;
+  border-radius: 25px;
+  justify-content: center;
+  z-index: 2;
+}
+
+@media screen and (max-width: 860px) {
+  .userline__parametr {
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .userline__parametr:nth-child(1) {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .userline__parametr {
+    height: 30px;
+    font-size: 12px;
+  }
+  
+  .userline__parametr:nth-child(1) {
+    width: 30px;
+  }
+}

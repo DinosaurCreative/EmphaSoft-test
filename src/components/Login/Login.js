@@ -8,15 +8,15 @@ function Login ({ onSubmit }) {
   const [ passwordError, setPasswordError ] = useState(false);  
   
   function errorHandler(e) {
-    if(e.target.name === 'username' && e.type === 'focus') return setUsernameError(true)
-    if(e.target.name === 'username' && e.type === 'blur') return setUsernameError(false)
+    if(e.target.name === 'username' && e.type === 'focus') return setUsernameError(true);
+    if(e.target.name === 'username' && e.type === 'blur') return setUsernameError(false);
     if(e.type === 'focus') return setPasswordError(true);
     setPasswordError(false);
   }
 
   function submitHandler(data) {
-    onSubmit(data)
-  }
+    onSubmit(data);
+  };
 
   return (
     <div className="login">
@@ -67,7 +67,7 @@ function Login ({ onSubmit }) {
         </Form>
       }
     </div>
-  )
-}
+  );
+};
 
 export default Login;

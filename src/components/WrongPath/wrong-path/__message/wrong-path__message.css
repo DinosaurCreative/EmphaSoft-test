@@ -1,0 +1,7 @@
+.wrong-path__message {
+  text-align: center;
+  font-size: 250px;
+  z-index: 1;
+  margin: 0 0 40px;
+  color: beige;
+}

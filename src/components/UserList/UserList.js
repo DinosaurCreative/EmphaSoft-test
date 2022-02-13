@@ -1,16 +1,15 @@
 import UserLine from "../UserLine/UserLine";
 
 function UserList(props) {
-
   const { users, sortByIdHandler, setIsSortedUp, isSortedUp, setSearchFormData, searchFormData, setUserForUpdate, history} = props;
   function sortHandler() {
     setIsSortedUp(!isSortedUp);
     sortByIdHandler();
-  }
+  };
   
   function onChangeHandler(e) {
-    setSearchFormData(e.target.value)
-  }
+    setSearchFormData(e.target.value);
+  };
 
   return (
     <div className="userlist">
@@ -31,7 +30,7 @@ function UserList(props) {
           {users.map((user, i)=> <UserLine {...user}  key={user.id} history={history} arrIndex={i} setUserForUpdate={setUserForUpdate}/>)}
         </ul>
     </div>
-  ) 
-}
+  );
+};
 
-export default UserList
+export default UserList;

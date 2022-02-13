@@ -1,0 +1,38 @@
+
+
+.notification-popup__img_error {
+  background-image: url(../../../../images/error.svg);
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 90px;
+  height: 90px;
+}
+
+@media screen and (max-width: 860px) {
+  .notification-popup__img_error {
+    margin-top: 5px;
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .notification-popup__img_error {
+    margin-top: 8px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notification-popup__img_error {
+    margin-top: 4px;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    opacity: .6;
+    z-index: -1;
+  }
+}

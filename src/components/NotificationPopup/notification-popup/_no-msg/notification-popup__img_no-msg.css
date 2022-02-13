@@ -1,0 +1,21 @@
+.notification-popup__img_no-msg {
+  margin: 35px auto auto;
+}
+
+@media screen and (max-width: 860px) {
+  .notification-popup__img_no-msg {
+    margin: 35px auto auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .notification-popup__img_no-msg {
+    margin: 25px auto auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notification-popup__img_no-msg {
+    margin: 20px auto auto;
+  }
+}

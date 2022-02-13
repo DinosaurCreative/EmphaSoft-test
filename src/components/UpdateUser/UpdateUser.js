@@ -3,7 +3,7 @@ import { validators } from '../../utils/validators';
 import { errors } from '../../utils/constants';
 import { useState } from 'react';
 
-function UpdateUser({ updateUserHandler, deleteUserHandler, userForUpdate, history, setUserForUpdate }) {
+function UpdateUser({ updateUserHandler, userForUpdate }) {
   const [ usernameError, setUsernameError ] = useState(false);
   const [ passwordError, setPasswordError ] = useState(false);
   const [ lastNameError, setLastNameError ] = useState(false);
@@ -25,18 +25,18 @@ function UpdateUser({ updateUserHandler, deleteUserHandler, userForUpdate, histo
       if (e.type ==='focus') {
         this[e.target.name](true);
       } else if(e.type === 'blur') {
-        this[e.target.name](false)
-      }
-    }
-  }
+        this[e.target.name](false);
+      };
+    },
+  };
 
   function submitHandler(data) {
     updateUserHandler({...data, id: +localStorage.getItem('idForUpdate')}, userForUpdate.index);
-  }
+  };
 
   function errorHandler(e) {
     inputErrorhandler.defineAction(e);
-  }
+  };
   
   return (
     <div className='update-user'>
@@ -108,7 +108,7 @@ function UpdateUser({ updateUserHandler, deleteUserHandler, userForUpdate, histo
          </SubmitButton>
        </Form>
     </div>
-  )
-}
+  );
+};
 
 export default UpdateUser;

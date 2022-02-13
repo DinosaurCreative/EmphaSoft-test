@@ -1,0 +1,5 @@
+.notification-popup_visible {
+  bottom: 25px;
+  right: 25px;
+  transform: translateY(0);
+}

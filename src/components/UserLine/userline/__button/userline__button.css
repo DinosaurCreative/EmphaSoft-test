@@ -1,0 +1,76 @@
+.userline__button {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  right: 0px;
+  left: 0px;
+  background-color: #0079cf;;
+  width: 48px;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  z-index: -1;
+  transition: all .2s ease-out;
+  background-image: url(../../../../images/Pencil.svg);
+  background-repeat: no-repeat;
+  animation: shake infinite .7s linear;
+}
+
+.userline__button:hover {
+  border-radius: 0px 25px 25px 0px;
+  width: 120px;
+  right: 50px;
+  left: 25px
+}
+
+@media screen and (max-width: 860px) {
+  .userline__button {
+    width: 40px;
+  }
+  .userline__button:hover {
+    width: 95px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .userline__button {
+    background-size: 35px;
+  }
+
+  .userline__button {
+    width: 40px;
+  }
+  .userline__button:hover {
+    width: 75px;
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .userline__button {
+    width: 30px;
+  }
+  .userline__button:hover {
+    width: 55px;
+    left: 15px;
+  }
+  .userline__button {
+    background-size: 30px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    background-position: top;
+  }
+  50% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: top;
+  }
+}

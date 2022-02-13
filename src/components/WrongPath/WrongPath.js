@@ -6,8 +6,8 @@ function WrongPath({ history }) {
       return
     }
     history.goBack();
+  };
 
-  }
   return (
       <div className="wrong-path">
         <div className="wrong-path__img" />
@@ -16,7 +16,7 @@ function WrongPath({ history }) {
           <button className="wrong-path__button" onClick={goBack}>GO BACK</button>
         </div>
       </div>
-  )
-}
+  );
+};
 
 export default WrongPath;

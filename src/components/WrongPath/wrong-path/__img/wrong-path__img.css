@@ -1,0 +1,11 @@
+.wrong-path__img {
+  background-image: url(../../../../images/хз.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  opacity: .1;
+  width: 55%;
+  height: 50%;
+  margin: 0 auto;
+}

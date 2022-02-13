@@ -10,7 +10,7 @@ export const validators = {
     },
     nameFormatErr(val) {
       return !nameRegexp.test(val);
-    }
+    },
   },
   password: {
     required(val) {
@@ -24,7 +24,7 @@ export const validators = {
     },
     passMinLength(val) {
       return val.length < 8;
-    }
+    },
   },
   password_login: {
     required(val) {
@@ -41,7 +41,7 @@ export const validators = {
     nameFormatErr(val) {
       if(val === '') return false;
       return !nameRegexp.test(val);
-    }
+    },
   },
   'last_name': {
     maxLength(val) {
@@ -50,7 +50,7 @@ export const validators = {
     nameFormatErr(val) {
       if(val === '') return false;
       return !nameRegexp.test(val);
-    }
+    },
   },
-}
+};
 

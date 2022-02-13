@@ -1,0 +1,11 @@
+.wrong-path__button {
+  outline: none;
+  background-color: #0083a1;
+  border: 3px solid rgba(255, 255, 255, 0.363);
+  border-radius: 10px;
+  cursor: pointer; 
+  z-index: 1;
+  color: white;
+  justify-content: center;
+  margin: 0 30px;
+}

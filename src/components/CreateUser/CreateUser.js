@@ -27,8 +27,8 @@ function UpadateUser({ createUserHandler }) {
         this[e.target.name](true);
       } else if(e.type === 'blur') {
         this[e.target.name](false);
-      }
-    }
+      };
+    },
   };
 
   function submitHandler(data) {

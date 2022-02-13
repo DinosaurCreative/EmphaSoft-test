@@ -16,7 +16,7 @@ function serverMessagesHandler(status, errorSetter) {
       break;
     default:
       errorSetter(unknownError);
-  }
-}
+  };
+};
 
 export default serverMessagesHandler;

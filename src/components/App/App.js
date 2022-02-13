@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     const sortedUsers = usersCopy.filter(user => user.username.toLowerCase().includes(searchFormData.toLowerCase().trim()));
     setUsers(sortedUsers);
-  }, [searchFormData])
+  }, [searchFormData]);
 
   useEffect(() => {
     if(localStorage.getItem('emphaToken') === null) {

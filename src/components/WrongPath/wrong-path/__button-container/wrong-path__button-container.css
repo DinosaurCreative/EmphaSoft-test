@@ -1,0 +1,4 @@
+.wrong-path__button-container {
+  display: flex;
+  flex-direction: column;
+}
