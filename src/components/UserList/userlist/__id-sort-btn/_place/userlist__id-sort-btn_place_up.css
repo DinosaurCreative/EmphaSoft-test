@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 600px) {
   .userlist__id-sort-btn_place_up {
-    top: 13px;
+    top: 11px;
     left: -1px;
     border-top: 28px solid #0879ce;
     border-left: 17px solid transparent;
