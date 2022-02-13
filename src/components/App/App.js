@@ -32,6 +32,12 @@ function App() {
   }, [searchFormData]);
 
   useEffect(() => {
+    setUserForUpdate(() => {
+      return JSON.parse(localStorage.getItem('userForUpdate'))
+    })
+  }, []);
+
+  useEffect(() => {
     if(localStorage.getItem('emphaToken') === null) {
       return setIsLoggedIn(false);
     }
@@ -53,6 +59,10 @@ function App() {
     });
     setUsers(sortedUsers);
   };
+
+  function cleanUserForUpdateLocalStorage() {
+    localStorage.removeItem('userForUpdate');
+  }
 
   function createUserHandler(data) {
     popupHandler(isPopupShowed);
@@ -105,6 +115,7 @@ function App() {
           .then(res => {
             setIsLoggedIn(true);
             setUsers(res);
+            setUsersCopy(res);
             localStorage.setItem('emphaUsers', JSON.stringify(res));
             })
             .catch(err => {
@@ -136,6 +147,7 @@ function App() {
         localStorage.setItem('emphaUsers', JSON.stringify(arr));
         setIsRequestOk(true);
         setPopupMessage(popupMessages.userDataChanged);
+        cleanUserForUpdateLocalStorage();
       })
       .catch(err => {
         setIsRequestOk(false);
@@ -198,7 +210,7 @@ function App() {
         {location.pathname === '/create-user' && <Link className='app__button' to='/users' href='#'>User list</Link>}
         {location.pathname === '/update-user' && <button className='app__button app__button_update-userlis' onClick={deleteUserHandler} to='/users' href='#'>Delete this user</button>}
         {location.pathname === '/users' && <Link className='app__button' to='/create-user' href='#'>Create user</Link>}
-        {location.pathname === '/update-user' && <Link className='app__button' to='/users' href='#'>GO BACK</Link>}
+        {location.pathname === '/update-user' && <Link className='app__button' to='/users' onClick={cleanUserForUpdateLocalStorage} href='#'>GO BACK</Link>}
 
         <button className='app__button app__button_exit' onClick={signOutHandler}>Exit</button>
       </nav>}

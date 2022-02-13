@@ -8,6 +8,7 @@ function UpdateUser({ updateUserHandler, userForUpdate }) {
   const [ passwordError, setPasswordError ] = useState(false);
   const [ lastNameError, setLastNameError ] = useState(false);
   const [ firstNameError, setFirstNameError ] = useState(false);
+  
   const inputErrorhandler = {
     'username': (action) => {
       setUsernameError(action);

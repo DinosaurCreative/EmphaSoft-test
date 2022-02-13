@@ -1,10 +1,10 @@
 function UserLine({ ...props }) {
   const { id, username, first_name, last_name, setUserForUpdate, history, arrIndex } = props;
-  
   function setUserForUpdateHandler() {
     setUserForUpdate({...props, index: arrIndex});
     history.push('/update-user');
     localStorage.setItem('idForUpdate', id);
+    localStorage.setItem('userForUpdate', JSON.stringify({...props, index: arrIndex}));
   };
 
   return(
