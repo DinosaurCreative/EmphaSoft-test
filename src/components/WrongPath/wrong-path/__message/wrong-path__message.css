@@ -5,3 +5,22 @@
   margin: 0 0 40px;
   color: beige;
 }
+
+
+@media screen and (max-width: 899px) {
+  .wrong-path__message {
+    font-size: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrong-path__message {
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .wrong-path__message {
+    font-size: 120px;
+  }
+}
