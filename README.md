@@ -23,3 +23,12 @@
 
 #### Сортировка по ID
 ![сортировка по id](https://user-images.githubusercontent.com/77802106/153774922-7855558d-36ef-498e-8070-e9d3b54bfbde.gif)
+
+
+
+## Команды
+
+- Запуск проекта на локальном сервере   
+    npm run start     
+- Собрать проект                        
+    npm run build
