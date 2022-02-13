@@ -103,7 +103,6 @@ function App() {
         setPopupMessage(popupMessages.signinOk);
         getUsers()
           .then(res => {
-            console.log(res)
             setIsLoggedIn(true);
             setUsers(res);
             localStorage.setItem('emphaUsers', JSON.stringify(res));
