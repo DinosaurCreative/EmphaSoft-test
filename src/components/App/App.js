@@ -134,7 +134,7 @@ function App() {
         setUsersCopy(arr);
         localStorage.setItem('emphaUsers', JSON.stringify(arr));
         setIsRequestOk(true);
-        setPopupMessage(popupMessage.userDataChanged);
+        setPopupMessage(popupMessages.userDataChanged);
       })
       .catch(err => {
         setIsRequestOk(false);

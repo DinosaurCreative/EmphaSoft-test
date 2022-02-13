@@ -1,6 +1,6 @@
 @import url(./vendor/nomalize.css);
 @import url(./components/App/App.css);
-@import url(./blocks/Forms/Forms.css);
+@import url(./blocks/blocks.css);
 @import url(./components/Login/Login.css);
 @import url(./components/UserLine/UserLine.css);
 @import url(./components/UserList/UserList.css);

@@ -6,6 +6,8 @@
   color: #ede9e9; 
   font-weight: 300;
   cursor: pointer;
+  margin-right: 10px;
+  overflow: hidden;
 }
 
 .userline__parametr:nth-child(1) {
@@ -30,7 +32,8 @@
 @media screen and (max-width: 450px) {
   .userline__parametr {
     height: 30px;
-    font-size: 12px;
+    font-size: 10px;
+
   }
   
   .userline__parametr:nth-child(1) {

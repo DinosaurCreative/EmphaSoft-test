@@ -1,7 +1,7 @@
 .userlist__column-titles-list {
   display: grid;
   width: 100%; 
-  grid-template-columns: 150px repeat(3, 1fr);
+  grid-template-columns: 100px repeat(3, 1fr);
 }
 
 .userlist__column-titles-list::after {
@@ -13,14 +13,14 @@
 
 @media screen and (max-width: 860px) {
   .userlist__column-titles-list {
-    grid-template-columns: 100px repeat(3, 1fr);
+    grid-template-columns: 80px repeat(3, 1fr);
   }
 
 }
 
 @media screen and (max-width: 600px) {
   .userlist__column-titles-list {
-    grid-template-columns: 80px repeat(3, 1fr);
+    grid-template-columns: 60px repeat(3, 1fr);
   }
 }
 

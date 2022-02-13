@@ -1,7 +1,7 @@
 .userline {
   display: grid;
   width: 100%;
-  grid-template-columns: 150px repeat(3, 1fr);
+  grid-template-columns: 100px repeat(3, 1fr);
   margin-top: 15px;
   position: relative;
 }
@@ -15,12 +15,9 @@
   border-radius: 25px 10px 10px 25px;
 }
 
-
-
-
 @media screen and (max-width: 860px) {
   .userline {
-    grid-template-columns: 100px repeat(3, 1fr);
+    grid-template-columns: 80px repeat(3, 1fr);
   }
   
   .userline:nth-of-type(1n) {
@@ -31,7 +28,7 @@
 @media screen and (max-width: 600px) {
   .userline {
     margin-top: 15px;
-    grid-template-columns: 80px repeat(3, 1fr);
+    grid-template-columns: 60px repeat(3, 1fr);
   }
 
   .userline:first-of-type {

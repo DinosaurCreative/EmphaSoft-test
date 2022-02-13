@@ -1,8 +1,0 @@
-@import url(./form/form.css);
-@import url(./form/__input/form__input.css);
-@import url(./form/__input/_error/form__input_error.css);
-@import url(./form/__error-span/form__error-span.css);
-@import url(./form/__error-span/_visible/form__error-span_visible.css);
-@import url(./form/__submit-btn/form__submit-btn.css);
-@import url(./form/__submit-btn/_disabled/form__submit-btn_disabled.css);
-@import url(./form/__error-span/_place/form__error-span_place_create-user.css);
