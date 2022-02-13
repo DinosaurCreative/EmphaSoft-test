@@ -1,6 +1,6 @@
 export const nameRegexp = /^[\w.@+-]+$/;
 export const passwordRegexp = /^(?=.*[A-Z])(?=.*\d).{0,}$/;
-export const baseURL = 'http://emphasoft-test-assignment.herokuapp.com';
+export const baseURL = 'https://emphasoft-test-assignment.herokuapp.com';
 export const errors = {
   required: 'Required field',
   maxLength: 'The maximum number of characters is exceeded',
