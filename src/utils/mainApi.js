@@ -7,7 +7,7 @@ export function getUsers() {
     method: 'GET',
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Token ${localStorage.getItem('token')}`
+      "Authorization": `Token ${localStorage.getItem('emphaToken')}`
     },
   })
   .then(res => checkServerResponse(res))
@@ -32,7 +32,7 @@ export function createUser({ username, first_name, last_name, password, is_activ
     method:'POST',
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Token ${localStorage.getItem('token')}`
+      "Authorization": `Token ${localStorage.getItem('emphaToken')}`
     },
     body: JSON.stringify({
       username,
@@ -50,7 +50,7 @@ export function deleteUser(id) {
     method: 'DELETE',
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Token ${localStorage.getItem('token')}`
+      "Authorization": `Token ${localStorage.getItem('emphaToken')}`
     },
   })
   .then((res) => res.ok ? Promise.resolve(res) : Promise.reject(res.status))
@@ -61,7 +61,7 @@ export function updateUser({username, first_name, last_name, password, is_active
     method: 'PATCH',
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Token ${localStorage.getItem('token')}`
+      "Authorization": `Token ${localStorage.getItem('emphaToken')}`
     },
     body: JSON.stringify({
       username,

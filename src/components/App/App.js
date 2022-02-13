@@ -102,19 +102,21 @@ function App() {
         setIsRequestOk(true);
         setPopupMessage(popupMessages.signinOk);
         getUsers()
-        .then(res => {
-          setIsLoggedIn(true);
-          setUsers(res);
-          localStorage.setItem('emphaUsers', JSON.stringify(res));
-          })
-          .catch(err => {
-            setIsRequestOk(false);
-            serverMessagesHandler(err, setPopupMessage);
-          })
-          .finally(() => {
-            history.push('/users');
-            setIsPopupShowed(true);
-          })
+          .then(res => {
+            console.log(res)
+            setIsLoggedIn(true);
+            setUsers(res);
+            localStorage.setItem('emphaUsers', JSON.stringify(res));
+            })
+            .catch(err => {
+              console.log(err)
+              setIsRequestOk(false);
+              serverMessagesHandler(err, setPopupMessage);
+            })
+            .finally(() => {
+              history.push('/users');
+              setIsPopupShowed(true);
+            })
       })
       .catch(err => {
         setIsRequestOk(false);
