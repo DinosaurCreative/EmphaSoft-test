@@ -32,6 +32,7 @@ function App() {
   }, [searchFormData]);
 
   useEffect(() => {
+
     setUserForUpdate(() => {
       return JSON.parse(localStorage.getItem('userForUpdate'))
     })
@@ -41,6 +42,7 @@ function App() {
     if(localStorage.getItem('emphaToken') === null) {
       return setIsLoggedIn(false);
     }
+    if(location.pathname === '/') history.push('/users');
     const users = JSON.parse(localStorage.getItem('emphaUsers'));
     setUsers(users);
     setUsersCopy(users);
