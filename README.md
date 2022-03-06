@@ -1,5 +1,11 @@
 # Тестовое задание EmphaSoft.
 
+### https://empha-soft-task-dinosaurcreative.vercel.app/users
+- Username: test_super
+- Password: Nf<U4f<rDbtDxAPn
+
+
+
 #### Функционал
 
 ```
