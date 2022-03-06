@@ -1,4 +1,4 @@
-# Тестовое задание EmphaSoft.
+# Практическое задание.
 
 ### https://empha-soft-task-dinosaurcreative.vercel.app/users
 - Username: test_super
